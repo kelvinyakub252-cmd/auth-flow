@@ -1,0 +1,72 @@
+GET http://127.0.0.1:3000
+
+###
+GET http://127.0.0.1:3000/json
+
+### sign-up
+POST  http://127.0.0.1:3000/auth/sign-up
+Content-Type: application/json
+
+{
+    "email":"kelvinyakub252@gmail.com",
+    "name":"Dev kelvin" ,
+    "age":"18", 
+    "field":"Web Dev",
+    "password":"2026"
+}
+
+### sign-in
+POST  http://127.0.0.1:3000/auth/sign-in
+Content-Type: application/json
+
+{
+    "email":"kelvinyakub252@gmail.com" ,
+    "password":"2028"
+}
+
+### forget password
+POST  http://127.0.0.1:3000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email":"kelvinyakub252@gmail.com" 
+}
+
+### reset password
+POST  http://127.0.0.1:3000/auth/reset-password
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJrZWx2aW55YWt1YjI1NkBnbWFpbC5jb20iLCJpYXQiOjE3NzQ4Njk4NTgsImV4cCI6MTc3NDg3MDc1OH0.RTFac8CDo7tTogZu9qPTk6YEPndGOSOM8dbKZGxPxT8",
+    "password":"2026"
+
+}
+
+
+### Get profile
+GET http://127.0.0.1:3000/profile
+ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJrZWx2aW55YWt1YjI1MkBnbWFpbC5jb20iLCJpYXQiOjE3NzU3MzUzMDYsImV4cCI6MTc3NjM0MDEwNn0.uEJAz_nVUqL6C9yQKKhT3WsSndctExslJ1SIPmkcN7o
+
+
+### update profile
+PUT http://127.0.0.1:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJrZWx2aW55YWt1YjI1MkBnbWFpbC5jb20iLCJpYXQiOjE3NzU3MzUzMDYsImV4cCI6MTc3NjM0MDEwNn0.uEJAz_nVUqL6C9yQKKhT3WsSndctExslJ1SIPmkcN7o
+Content-Type: application/json
+
+ {
+    "name": "else",
+    "age": 18,
+    "field": "okaty"
+ }
+
+
+### Change Password
+PATCH http://127.0.0.1:3000/profile
+ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJrZWx2aW55YWt1YjI1NkBnbWFpbC5jb20iLCJpYXQiOjE3NzQ4NjgxNDMsImV4cCI6MTc3NTQ3Mjk0M30.j1hjXTVsa---Jj8295tn7U3qqHylGBhIprV0gN2aGVg
+ Content-Type: application/json
+ 
+ {
+    "oldPassword": "2026",
+    "newPassword": "2028"
+ }
+   
