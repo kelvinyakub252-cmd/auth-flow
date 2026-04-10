@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:3000";
+const API_URL = "https://auth-flow-backend-r00l.onrender.com";
 let currentUser = null;
 
 // Show alert message
