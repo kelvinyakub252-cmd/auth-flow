@@ -269,10 +269,10 @@ async function handleChangePassword(e) {
       body: JSON.stringify(data),
     });
     const result = await res.json();
-
+alert(result.message || result.error  || "nothing");
     if (res.ok) {
       alert(result.message || "Password changed successfully!");
-    //  e.target.reset();
+      e.target.reset();
     } else {
       alert(result.error || "Password change failed", "error");
     }
