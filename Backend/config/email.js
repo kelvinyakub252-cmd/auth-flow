@@ -20,7 +20,7 @@ const sendResetPassword = async (email, token) => {
     from: `"Auth Flow" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: "Reset Password",
-    html: `Here is your reset token <a href="http://127.0.0.1:5500/frontend/reset-password.html?token=${token}">click to reset password</a>`,
+    html: `Here is your reset token <a href="https://auth-flow-frontend-1ey7.onrender.com/reset-password.html?token=${token}">click to reset password</a>`,
   };
 
   try {
