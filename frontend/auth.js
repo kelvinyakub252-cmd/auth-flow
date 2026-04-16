@@ -272,7 +272,7 @@ async function handleChangePassword(e) {
 
     if (res.ok) {
       alert(result.message || "Password changed successfully!");
-      e.target.reset();
+    //  e.target.reset();
     } else {
       alert(result.error || "Password change failed", "error");
     }
